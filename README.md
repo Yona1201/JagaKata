@@ -23,7 +23,7 @@ JagaKata dibangun menggunakan model **IndoBERTweet** yang telah di-*fine-tune*, 
 
 *  **Teks**: Ketik langsung untuk analisis cepat
 *  **YouTube**: Analisis otomatis komentar video YouTube hanya dengan URL
-*  **File**: Unggah berkas `.csv`, `.xlsx`, `.txt`, `.docx` untuk analisis massal
+*  **File**: Unggah berkas `.csv`, `.xlsx`, `.txt` untuk analisis massal
 
 ###  Visualisasi & Laporan
 
@@ -68,7 +68,7 @@ Berisi dokumentasi proses penelitian dan pengembangan model dalam bentuk *Notebo
 Aplikasi ini telah di-*deploy* dan dapat dicoba secara langsung melalui **Hugging Face Spaces**:
 
 👉 **Akses JagaKata di Hugging Face**
-*[(URL Hugging Face Spaces)](https://huggingface.co/spaces/Yona1201/JagaKata)*
+*[(Aplikasi JagaKata)](https://huggingface.co/spaces/Yona1201/JagaKata)*
 
 ---
 
