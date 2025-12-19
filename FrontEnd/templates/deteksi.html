@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="deteksi-section">
+  <div class="container deteksi-inner">
+    <aside class="deteksi-sidebar">
+      <button class="side-btn active" data-mode="text" type="button" aria-pressed="true">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8z"/></svg>
+        <span>Teks</span>
+      </button>
+      <button class="side-btn" data-mode="youtube" type="button" aria-pressed="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M549.7 124.1c-6.3-24.2-24.9-43.1-49-49.5C460.6 64 288 64 288 64s-172.6 0-212.7 10.6c-24.1 6.4-42.7 25.3-49 49.5C16 164.2 16 256 16 256s0 91.8 10.3 131.9c6.3 24.2 24.9 43.1 49 49.5C115.4 448 288 448 288 448s172.6 0 212.7-10.6c24.1-6.4 42.7-25.3 49-49.5C560 347.8 560 256 560 256s0-91.8-10.3-131.9zM232 336V176l142.7 80L232 336z"/></svg>
+        <span>YouTube</span>
+      </button>
+      <button class="side-btn" data-mode="file" type="button" aria-pressed="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zM64 416V352h256v64H64z"/></svg>
+        <span>File</span>
+      </button>
+    </aside>
+    <div class="deteksi-main">
+      <!-- Mode Teks -->
+      <div id="mode-text" class="mode-pane">
+        <h2>Input Teks</h2>
+        <textarea id="input-text" placeholder="Masukkan teks..." rows="6"></textarea>
+        <div class="error-container" id="error-text"></div>
+        <button id="btn-detect-text" class="btn-detect">Deteksi</button>
+      </div>
+      <!-- Mode YouTube -->
+      <div id="mode-youtube" class="mode-pane hidden">
+        <h2>Input URL YouTube</h2>
+        <input id="input-youtube" type="text" placeholder="Masukkan URL YouTube..." />
+        <div class="error-container" id="error-youtube"></div>
+        <button id="btn-detect-youtube" class="btn-detect">Deteksi</button>
+      </div>
+      <!-- Mode File -->
+      <div id="mode-file" class="mode-pane hidden">
+        <h2>Upload File</h2>
+        <input id="input-file" type="file" accept=".csv,.xlsx,.txt" />
+        <div class="error-container" id="error-file"></div>
+        <button id="btn-detect-file" class="btn-detect">Deteksi</button>
+      </div>
+      
+      <!-- Hasil Deteksi -->
+      <div class="results">
+        <h3>Hasil Deteksi</h3>
+        <div id="loader" class="loader-container hidden">
+          <div class="spinner"></div>
+          <p>Memproses, mohon tunggu...</p>
+        </div>
+        <!-- Kontainer Chart dan Tabel -->
+        <div id="chartContainer" class="hidden" style="max-width:400px; margin: 1rem auto;">
+          <canvas id="chartCanvas" width="400" height="300"></canvas>
+        </div>
+        <div id="tableContainer">
+          <p>Belum ada hasil.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% block scripts %}
+<script src="/static/js/detect.js"></script>
+{% endblock %}
+{% endblock %}

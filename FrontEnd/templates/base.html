@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ title if title else "JagaKata" }}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="{% if title and title|lower == 'deteksi' %}page-deteksi{% endif %}">
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Kiri: Logo JagaKata -->
+      <div class="brand">
+        <img src="/static/images/logo-header.svg" alt="JagaKata" class="logo-header" />
+        <span class="brand-title">Jaga<span class="brand-accent">Kata</span></span>
+      </div>
+
+      <!-- Tengah: Menu Navigasi -->
+      <nav class="main-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/deteksi" class="nav-link">Deteksi</a>
+        <a href="/about" class="nav-link">Tentang</a>
+        <a href="/help" class="nav-link">Bantuan</a>
+      </nav>
+
+      <!-- Kanan: Logo FTI -->
+      <div class="header-right">
+        <img src="/static/images/logo-fti.png" alt="FTI" class="logo-fti" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <img src="/static/images/logo-footer.svg" alt="JagaKata" class="logo-footer" />
+        <span>JagaKata</span>
+      </div>
+      <div class="footer-center">© JagaKata 2025</div>
+    </div>
+  </footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

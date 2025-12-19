@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Tentang Aplikasi -->
+<section class="container page-section about-section">
+  <!-- Bagian penjelasan -->
+  <div class="about-app-text">
+    <h1>
+      Apa itu Jaga<span class="highlight">Kata</span>?
+    </h1>
+    <p>
+      Jaga <span class="highlight">Kata</span> adalah aplikasi cerdas untuk mendeteksi ujaran kebencian 
+      dalam Bahasa Indonesia berdasarkan target, kategori, dan tingkat kekerasannya.
+    </p>
+  </div>
+  <!-- Logo JagaKata -->
+  <div class="about-logo-app">
+    <img src="/static/images/logo-header.svg" alt="Logo JagaKata" />
+    <h2>Jaga<span class="highlight">Kata</span></h2>
+  </div>
+</section>
+
+<!-- Pengembang -->
+<section class="page-section card">
+  <h2>Pengembang Aplikasi</h2>
+  <!-- PERUBAHAN DI SINI: Menggunakan .profile-card agar konsisten dan lebih profesional -->
+  <div class="profile-card" style="margin: 0 auto; text-align: center;">
+    <img src="/static/images/foto-briliona.png" alt="Briliona" class="profile-photo" />
+    <p style="font-size: 1.1em; line-height: 1.6; margin-top: 1rem;">
+      <strong>Briliona</strong><br>
+      535220124
+    </p>
+  </div>
+</section>
+
+<!-- Dosen Pembimbing -->
+<section class="page-section card">
+  <h2>Dosen Pembimbing</h2>
+  <div class="profile-grid">
+    <div class="profile-card">
+      <img src="/static/images/dosen-utama.png" alt="Dosen Utama" class="profile-photo" />
+      <p><strong>Dosen Pembimbing Utama</strong><br>
+      Viny Christanti Mawardi, S.Kom., M.Kom.</p>
+    </div>
+    <div class="profile-card">
+      <img src="/static/images/dosen-pendamping.png" alt="Dosen Pendamping" class="profile-photo" />
+      <p><strong>Dosen Pembimbing Pendamping</strong><br>
+      Manatap Dolok Lauro Sitorus, S.Kom., M.M.S.I.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BAGIAN INSTITUSI YANG LAMA DIHAPUS DAN DIGANTI DENGAN YANG BARU INI -->
+<section class="page-section card">
+  <div class="about-logo" style="gap: 1.5rem;">
+    <img src="/static/images/logo-untar.png" alt="UNTAR Logo" style="width: 100px; height: auto;" />
+    <!-- PERUBAHAN DI SINI: Urutan dan gaya font disesuaikan -->
+    <div style="text-align: left;">
+      <p style="font-size: 1.2rem; font-weight: 700; margin: 0; color: var(--text);">Universitas Tarumanagara</p>
+      <p style="font-size: 1.1rem; margin: 0.2rem 0; color: var(--muted);">Fakultas Teknologi Informasi</p>
+      <p style="font-size: 1.1rem; margin: 0; color: var(--text);">Teknik Informatika</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

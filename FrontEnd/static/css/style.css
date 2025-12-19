@@ -1,0 +1,524 @@
+/* --- Variabel Warna & Font Global --- */
+:root {
+  --accent: #a21825;   /* warna utama */
+  --muted: #6b7280;
+  --bg: #f7f7f8;
+  --card: #fff;
+  --text: #111;
+  --border-color: #e5e7eb;
+}
+
+/* --- Pengaturan Dasar & Reset CSS --- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Ubuntu", sans-serif;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+body > main {
+  flex: 1;
+}
+
+/* --- Utility Class --- */
+.hidden {
+  display: none !important;
+}
+
+/* --- Layout Kontainer Utama --- */
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* --- Header Situs --- */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right img.logo-fti {
+  max-height: 40px !important;
+  width: auto !important;
+  display: block;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-header {
+  height: 40px;
+}
+
+.brand-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.brand-accent {
+  color: var(--accent);
+}
+
+/* --- Menu Navigasi --- */
+.main-nav a {
+  margin-left: 18px;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+/* --- Bagian Hero di Halaman Utama --- */
+.hero {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 60vh;
+}
+
+.hero-inner {
+  max-width: 600px;
+}
+
+.hero-left .subtitle {
+  color: var(--muted);
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hero-left h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* --- Gaya Tombol Global --- */
+/* Tombol Utama (Besar, untuk ajakan utama) */
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 12px rgba(162, 24, 37, 0.4);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #7f141b;
+  box-shadow: 0 8px 20px rgba(127, 20, 27, 0.6);
+  outline: none;
+}
+
+/* Tombol Sekunder (Kecil, untuk aksi di dalam halaman) */
+.btn-secondary {
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(162, 24, 37, 0.3);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  box-shadow: 0 6px 15px rgba(127, 20, 27, 0.5);
+}
+
+/* --- Layout Halaman Deteksi --- */
+.deteksi-section {
+  padding: 30px 0;
+}
+
+.deteksi-inner {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Sidebar Pilihan Mode */
+.deteksi-sidebar {
+  width: 180px;
+  background: var(--card);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.side-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;
+  width: 100%;
+}
+.side-btn svg.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.side-btn:hover {
+  background-color: #7f141b;
+  color: white;
+}
+.side-btn.active {
+  background: linear-gradient(90deg, var(--accent), #a52828);
+  color: white;
+}
+
+/* Konten Utama Halaman Deteksi */
+.deteksi-main {
+  flex: 1;
+  background: var(--card);
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.mode-pane {
+  margin-bottom: 18px;
+}
+
+/* --- Gaya Form Input --- */
+textarea,
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-family: "Ubuntu", sans-serif; 
+}
+
+/* Gaya Tombol Deteksi */
+.btn-detect {
+  margin-top: 10px;
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border: none;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(162, 24, 37, 0.3);
+}
+
+.btn-detect:hover,
+.btn-detect:focus {
+  background-color: #7f141b;
+  box-shadow: 0 6px 15px rgba(127, 20, 27, 0.5);
+  outline: none;
+}
+
+.btn-detect:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* --- Area Hasil Deteksi --- */
+.results {
+  margin-top: 18px;
+}
+
+/* Gaya Tabel Hasil */
+table.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--text);
+  border: 1px solid var(--border-color);
+}
+
+table.result-table th,
+table.result-table td {
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  text-align: left;
+}
+
+table.result-table th {
+  background: #fbeaea;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Wadah Diagram Pie */
+#chartContainer {
+  margin-top: 18px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Gaya Halaman Statis (Tentang & Bantuan) --- */
+.page-section {
+  padding: 40px 20px;
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 900px;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 0;
+}
+.about-app-text {
+  flex: 1;
+  text-align: left;
+}
+.about-app-text h1 {
+  font-weight: 700;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+.about-app-text p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
+}
+.highlight {
+  color: #a21825;
+  font-weight: 700;
+}
+.about-logo-app {
+  flex: 0 0 auto;
+  text-align: center;
+}
+.about-logo-app img {
+  width: 250px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.about-logo-app h2 {
+  margin-top: 10px;
+  font-weight: 700;
+}
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.profile-photo:hover {
+  transform: scale(1.08);
+}
+.developer-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.developer-profile .profile-info {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.profile-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.profile-card {
+  max-width: 250px;
+}
+.about-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.about-logo img {
+  width: 90px;
+  height: auto;
+}
+.institution-name {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.help-section {
+  margin: 2rem auto;
+  max-width: 700px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.help-section h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #a21825;
+}
+
+/* Gaya untuk Screenshot di Halaman Bantuan */
+.help-screenshot {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-top: 1rem;
+}
+
+
+/* --- Footer Situs --- */
+.site-footer {
+  background: var(--accent);
+  color: white;
+  padding: 18px 0;
+  width: 100%;
+  z-index: 100;
+  position: static;
+  bottom: 0;
+  left: 0;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo-footer {
+  height: 28px;
+}
+.footer-center {
+  margin-left: auto;
+  flex: 1;
+  text-align: right;
+  font-size: 14px;
+}
+
+/* --- Indikator Loading & Pesan Error --- */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+  color: var(--muted);
+}
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--accent);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-container {
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 8px;
+  min-height: 20px;
+}
+
+/* --- Penyesuaian Tampilan Mobile (Responsive) --- */
+@media (max-width: 900px) {
+  .hero {
+    padding: 50px 20px;
+  }
+  .hero-left h1 {
+    font-size: 28px;
+  }
+  .btn-primary {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+  .deteksi-inner {
+    flex-direction: column;
+  }
+  .deteksi-sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* Ubah agar tombol sejajar */
+    gap: 8px;
+    overflow-x: auto;   /* Izinkan scroll horizontal jika tidak muat */
+  }
+  .main-nav {
+    display: none;
+  }
+}
+

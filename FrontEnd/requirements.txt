@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+transformers
+torch
+pandas
+openpyxl
+xlrd
+scikit-learn
+python-multipart
+aiofiles
+matplotlib
+google-api-python-client
+beautifulsoup4
+jinja2
+python-dotenv

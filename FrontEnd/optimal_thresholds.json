@@ -1,0 +1,14 @@
+
+{
+  "HS": 0.81,
+  "HS_Individual": 0.63,
+  "HS_Group": 0.67,
+  "HS_Religion": 0.74,
+  "HS_Race": 0.12,
+  "HS_Physical": 0.7,
+  "HS_Gender": 0.27,
+  "HS_Other": 0.87,
+  "HS_Weak": 0.87,
+  "HS_Moderate": 0.34,
+  "HS_Strong": 0.39
+}

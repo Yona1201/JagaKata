@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="container page-section">
+  <div class="help-section" style="text-align: left;">
+    <h1><span style="color: var(--text);">Panduan Penggunaan Jaga</span><span class="highlight">Kata</span></h1>
+    <p style="font-size: 1.1em; color: var(--muted); margin-bottom: 2rem;">
+      Ikuti langkah-langkah mudah berikut untuk mendeteksi ujaran kebencian menggunakan aplikasi kami.
+    </p>
+
+    <!-- Langkah 1 -->
+    <div class="card">
+      <h3 style="color: var(--accent);">Langkah 1: Pilih Mode Input</h3>
+      <p>
+        Buka halaman "Deteksi", lalu pilih salah satu dari tiga mode input yang tersedia di sidebar kiri sesuai dengan sumber data Anda: <strong>Teks</strong>, <strong>YouTube</strong>, atau <strong>File</strong>.
+      </p>
+      <img src="/static/images/ss-pilih-mode.png" alt="Langkah 1: Pilih mode input" class="help-screenshot">
+    </div>
+
+    <!-- Langkah 2 -->
+    <div class="card">
+      <h3 style="color: var(--accent);">Langkah 2: Masukkan Data Anda</h3>
+      <p>
+        Setelah memilih mode, masukkan data Anda pada kolom yang tersedia. Anda bisa mengetik teks, menempelkan URL video YouTube, atau mengunggah file berformat .csv, .xlsx, atau .txt.
+      </p>
+      <img src="/static/images/ss-masukkan-input.png" alt="Langkah 2: Masukkan data" class="help-screenshot">
+    </div>
+
+    <!-- Langkah 3 -->
+    <div class="card">
+      <h3 style="color: var(--accent);">Langkah 3: Lihat Hasil Analisis</h3>
+      <p>
+        Klik tombol "Deteksi" dan tunggu beberapa saat. Aplikasi akan menampilkan hasil analisis dalam bentuk diagram ringkasan dan tabel rincian untuk setiap teks yang diproses.
+      </p>
+      <img src="/static/images/ss-hasil-deteksi.png" alt="Langkah 3: Lihat hasil" class="help-screenshot">
+    </div>
+    
+    <!-- Langkah 4 -->
+    <div class="card">
+      <h3 style="color: var(--accent);">Langkah 4: Unduh Hasil (Opsional)</h3>
+      <p>
+        Jika Anda membutuhkan salinan data hasil analisis, klik tombol "Download CSV" yang terletak di bawah tabel untuk menyimpan hasilnya ke komputer Anda.
+      </p>
+      <img src="/static/images/ss-unduh-hasil.png" alt="Langkah 4: Unduh hasil" class="help-screenshot">
+    </div>
+
+  </div>
+</section>
+{% endblock %}
